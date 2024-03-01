@@ -1,6 +1,7 @@
 import string
 import random
 
+
 def Pass_Generator():
 
     while True:
@@ -26,8 +27,8 @@ def Pass_Generator():
             return randomSpecial
 
         else:
-            print("You need to use 'y' or 'n'")        
+            print("You need to use 'y' or 'n'")
         break
 
-Pass_Generator()
 
+Pass_Generator()
