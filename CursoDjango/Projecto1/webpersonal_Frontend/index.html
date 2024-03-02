@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Juan Pérez</title>
+    <title>{% block title %}{% endblock %} | Juan Pérez</title>
 
     <!-- Estilos y fuentes del template  -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -30,16 +30,16 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Portada</a>
+              <a class="nav-link" href="{% url 'home' %}">Portada</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">Acerca de</a>
+              <a class="nav-link" href="{% url 'about' %}">Acerca de</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="portfolio.html">Portafolio</a>
+              <a class="nav-link" href="{% url 'portfolio' %}">Portafolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contacto</a>
+              <a class="nav-link" href="{% url 'contact' %}">Contacto</a>
             </li>
           </ul>
         </div>
@@ -61,6 +61,8 @@
       </div>
     </header>
 
+    <!-- Contenido -->
+    {% block content %}{% endblock %}
     <!-- Pié de página -->
     <footer>
       <div class="container">
